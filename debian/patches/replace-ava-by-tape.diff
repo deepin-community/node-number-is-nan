@@ -1,0 +1,20 @@
+Description: replace ava by tape
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-03-08
+
+--- a/test.js
++++ b/test.js
+@@ -1,5 +1,5 @@
+ 'use strict';
+-const test = require('ava');
++const test = require('tape');
+ Number.isNaN = undefined;
+ const numberIsNan = require('.');
+ 
+@@ -16,4 +16,5 @@
+ 	t.false(numberIsNan('unicorn'));
+ 	t.false(numberIsNan({}));
+ 	t.false(numberIsNan([]));
++	t.end();
+ });

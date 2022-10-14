@@ -1,0 +1,21 @@
+Source: node-number-is-nan
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Sruthi Chandran <srud@disroot.org>
+Build-Depends: debhelper-compat (= 13)
+ , node-tape <!nocheck>
+ , dh-sequence-nodejs
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-number-is-nan
+Vcs-Git: https://salsa.debian.org/js-team/node-number-is-nan.git
+Homepage: https://github.com/sindresorhus/number-is-nan
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-number-is-nan
+Architecture: all
+Depends: ${misc:Depends}
+Description: ES6 Number.isNaN() ponyfill
+ The Number.isNaN method determines whether the passed value is NaN
+ (Not-A-Number). It is a more robust version of the original, global isNaN.
